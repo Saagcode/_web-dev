@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/form.css">
+</head>
+<script src="../projeto-glass-html5/_javascript/funcoes.js"></script>
+<body>
+<div id="interface">
+    <header id="cabecalho">
+        <hgroup> 
+            <h1>Google Glass</h1>
+            <h4>A revolução do Google está chegando</h4>
+        </hgroup>
+            <img src="_imagens/contato.png" alt="imagem aqui" id="oculospeq" style="opacity: 1;" onmouseenter="shine()" onmouseleave="dark()"><br> 
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul type="circle">
+                <li class="item" onmouseover="changepic('_imagens/home.png')" onmouseout="goback('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                <li class="item" onmouseover="changepic('_imagens/especificacoes.png')" onmouseout="goback('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                <li class="item" onmouseover="changepic('_imagens/fotos.png')" onmouseout="goback('_imagens/contato.png')"><a href="fotos.html" >Fotos</a></li>
+                <li class="item" onmouseover="changepic('_imagens/multimidia.png')" onmouseout="goback('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                <li class="item" onmouseover="changepic('_imagens/contato.png')" onmouseout="goback('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="corpofull" style="padding: 40px;">
+        <article id="noticiamain">
+            <header id="cabecalhoarticle">
+                <hgroup>
+                    <h3>Fale Conosco > Contato</h3>
+                    <h1>Formulario de contato</h1>
+                    <h3 style="margin-top: -22px; padding: 10px;" >por Gustavo Guanabara</h3>
+                    <h3 style="margin-left: 600px; font-size: 10pt;">&nbsp; Atualizado em 27/10/2023</h3>
+                </hgroup> 
+            </header>
+        </article>
+    </section>
+    <div id="interfaceform">    
+        <form method="post" id="fcontato" action="mailto:g_131n0@hotmail.com">   <!--metodo post pra velocidade mas tem menos seguranca, metodo get e lento mas tem mais seguranca. action diz respeito ao local q sera enviado os dados. -->           <!--Formulario-->
+            <fieldset id="user">         <!--Campo do formulario-->
+                    <legend> <!--Titulo do grupo do formulario-->
+                        Identificação do Usuário
+                    </legend>
+                    <p><label for="inome">Nome:</label> <input type="text" name="nnome" id="inome" size="21" maxlength="50" placeholder="Nome Completo"></p>
+                    <p><label for="isenha">Senha:</label> <input type="password" name="nsenha" id="isenha" size="21" maxlength="12" placeholder="Max: 12 caracteres"></p>
+                    <p>E-mail: <input type="text" name="nemail" id="iemail" size="21" maxlength="45"></p> <!--Tamanho da caixa e limite de caracteres dentro da caixa respectivamente.-->
+                    <div style="margin-left: 49px;">
+                        <fieldset id="sex">
+                            <legend>
+                                Sexo
+                            </legend>
+                            <input type="radio" name="gen" id="masc" checked style="margin-left: 5px;">
+                            <label for="masc" id="man">Masculino</label> 
+                            <input type="radio" name="gen" id="fem" style="margin-left: 5px;"> 
+                            <label for="fem" id="woman">Feminino</label>
+                        </fieldset>
+                    </div>
+                    <p><label for="idate"></label>Data de Nascimento: <input type="date" name="ndate" id="idate"></p>
+            </fieldset> 
+        </div>
+            <div id="interfaceform">
+                <fieldset id="adress">
+                    <legend>
+                        Endereço do Usuário
+                    </legend>
+                    <p><label for="irua">Logradouro:</label> <input type="text" name="nrua" id="irua" placeholder="Rua/Av/Trav"></p>
+                    <p><label for="inum">Número: </label><input type="number" name="nnum" id="inum" min="0" max="99999"></p>
+                    <p><label for="istate">Estado:</label> 
+                        <select name="nstate" id="istate">
+                            <optgroup label="Sudeste">
+                                <option value="SP">Sao paulo</option>
+                                <option value="RJ">Rio de janeiro</option>
+                                <option value="MG">Minas Gerais</option>
+                            </optgroup>
+                            <optgroup label="Sul">
+                                <option value="SC" selected>Santa Catarina</option>
+                                <option value="PR">Parana</option>
+                                <option value="RS">Rio Grande do sul</option>
+                            </optgroup>
+                            <optgroup label="Nordeste"> <!-- grupo para identificacao de determinada regiao -->
+                                <option value="MA">Maranhao</option>
+                                <option value="RO">Rondonia</option>
+                                <option value="AC">Acre</option>
+                            </optgroup>
+                            <optgroup label="Centro-Oeste"> 
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="DF">Brasilia</option> <!--Value serve para identificar no banco de dados-->
+                            </optgroup>
+                            
+                        </select></p>
+                        <p><label for="icity">Cidade:</label> <input type="text" name="ncity" id="icity" maxlength="30" placeholder="Sua Cidade" list="cidades"></p>
+                        <datalist id="cidades"> 
+                            <optgroup>
+                                <option>Pomerode</option>
+                                <option>Joinville</option>
+                                <option>Jaragua</option>
+                                <option>Mafra</option>
+                                <option>Rio Negrinho</option>
+                                <option>Sao Bento do Sul</option>
+                            </optgroup>
+                        </datalist>
+                </div>    
+            </fieldset>
+                <div id="interfaceform">
+            <fieldset id="msg">
+                <legend>
+                    Mensagem do Usuário
+                </legend>
+                <p><label for="igrau">Grau de Urgência:</label> <input type="radio" name="urgencia" id="grau1"><label for="grau1"><span id="primeirograu" onmouseenter="clean()">Sem urgencia</span></label> <input type="radio" name="urgencia" id="grau2"> <label for="grau2"><span id="segundograu" onmouseenter="clean()">Urgente</span></label><input type="radio" name="urgencia" id="grau3"> <label for="grau3"><span id="terceirograu" onmouseenter="clean()">Extrema urgencia</span></label> <input type="button" value="Confirmar" style="margin-left: 20px;" onclick="confirmar()"></p><div id="confirmacao"></div>
+                <p><label for="imsg"></label><span id="usermsg">Mensagem:</span><textarea name="nmsg" id="imsg" cols="20" rows="5" maxlength="100" placeholder="Digite ate 100 caracteres"></textarea></p>
+            </fieldset>
+        </div>    
+        <div id="interfaceform">
+            <fieldset id="sell">
+                <legend> <!--Titulo do grupo do formulario-->
+                    Quero um Google Glass
+                </legend>
+                <p><input type="checkbox" name="nbox" id="ibox" onclick="check()"> <label for="ibox"></label>    Gostaria de adquirir um Google Glass quando disponível: </p>
+                <div style="opacity: 0;" id="grupo">
+                    <p><label for="icor">Cor:</label> <input type="color" name="ncor" id="icor" value="#0000FF"></p>
+                    <p><label for="iquant">Quantidade:</label> <input type="number" name="nquant" id="iquant" min="0" max="5" value="0" oninput="tot();"></p>
+                    <p><label for="iprice">Preço Total: R$</label> <input type="number" name="nprice" id="iprice" readonly placeholder="Total a pagar"></p>
+                </div>
+            </fieldset>   <!--Campo do formulario-->
+        </div>    
+        <label for="botao"><div id="interfaceformbotao" onclick="ajuda()" >
+            <div id="up" ><input type="image" src="_imagens/botao-enviar.png" id="botao" style="background-color: transparent;">
+            <div id="circle"></div><span id="send">Enviando...</span>
+        </div></label>    
+        </form>           <!--Formulario-->
+      </div>  
+        <footer>
+            &copy; Copyright - by Gustavo Guanabara <br> <br>
+            <a href=""_blank>Facebook</a> | <a href=""_blank>Twitter</a>
+        </footer>
+    
+</body>
+</html>

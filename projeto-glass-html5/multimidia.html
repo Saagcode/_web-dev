@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tudo sobre Googleglass</title>
+    <link rel="stylesheet" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/media.css">
+</head>
+<script src="../projeto-glass-html5/_javascript/funcoes.js"></script>
+<div id="interface">
+    <header id="cabecalho">
+        <hgroup> 
+            <h1>Google Glass</h1>
+            <h4>A revolução do Google está chegando</h4>
+        </hgroup>
+            <img src="_imagens/multimidia.png" alt="imagem aqui" id="oculospeq" style="opacity: 1;" onmouseenter="shine()" onmouseleave="dark()"><br> 
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul type="circle">
+                <li class="item" onmouseover="changepic('_imagens/home.png')" onmouseout="goback('_imagens/multimidia.png')"><a href="index.html">Home</a></li>
+                <li class="item" onmouseover="changepic('_imagens/multimidia.png')" onmouseout="goback('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+                <li class="item" onmouseover="changepic('_imagens/fotos.png')" onmouseout="goback('_imagens/multimidia.png')"><a href="fotos.html" >Fotos</a></li>
+                <li class="item" onmouseover="changepic('_imagens/multimidia.png')" onmouseout="goback('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+                <li class="item" onmouseover="changepic('_imagens/contato.png')" onmouseout="goback('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="corpofull" style="padding: 40px;">
+        <article id="noticiamain">
+            <header id="cabecalhoarticle">
+                <hgroup>
+                    <h3>Glass > Multimidia</h3>
+                    <h1>Sons e videos</h1>
+                    <h3 style="margin-top: -22px; padding: 10px;" >por Gustavo Guanabara</h3>
+                    <h3 style="margin-left: 600px; font-size: 10pt;">&nbsp; Atualizado em 27/10/2023</h3>
+                </hgroup> 
+            </header>            
+            <div id="tvradio" onclick="play()"> 
+                <audio src="../projeto-glass-html5/_media/audiotest.ogg" id="musica" type="audio/ogg" controls poster="../projeto-glass-html5/_imagens/video-mini03.jpg">Nao foi possivel reproduzir o conteudo.</audio>
+                <video src="../projeto-glass-html5/_media/googleglass.mp4" id="filme" type="video/mp4" controls poster="../projeto-glass-html5/_imagens/video-mini03.jpg" style="opacity: 0.1;">Nao foi possivel reproduzir o conteudo.</video>
+                <p id="caption" onclick="play()">click</p>
+            </div>         
+        </article>
+    </section>
+<footer>
+    &copy; Copyright - by Gustavo Guanabara <br> <br>
+    <a href=""_blank>Facebook</a> | <a href=""_blank>Twitter</a>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+<link rel="stylesheet" type="text/css" href="_css/specs.css">
+<body onload="load()">
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup> 
+                <h1>Google Glass</h1>
+                <h4>A revolução do Google está chegando</h4>
+            </hgroup>
+            <img src="_imagens/especificacoes.png" alt="imagem aqui" id="oculospeq" style="opacity: 1;" onmouseenter="shine()" onmouseleave="dark()"><br> 
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul type="circle">
+                    <li class="item" onmouseover="changepic('_imagens/home.png')" onmouseout="goback('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+                    <li class="item" onmouseover="changepic('_imagens/especificacoes.png')" onmouseout="goback('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+                    <li class="item" onmouseover="changepic('_imagens/fotos.png')" onmouseout="goback('_imagens/especificacoes.png')"><a href="fotos.html" >Fotos</a></li>
+                    <li class="item" onmouseover="changepic('_imagens/multimidia.png')" onmouseout="goback('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
+                    <li class="item" onmouseover="changepic('_imagens/contato.png')" onmouseout="goback('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpofull" style="padding: 40px;">
+            <article id="noticiamain">
+                <header id="cabecalhoarticle">
+                    <hgroup>
+                        <h3>Glass > Especificações</h3>
+                        <h1>Raio-X no Google Glass</h1>
+                        <h3 style="margin-top: -22px; padding: 10px;" >por Gustavo Guanabara</h3>
+                        <h3 style="margin-left: 600px; font-size: 10pt;">&nbsp; Atualizado em 27/10/2023</h3>
+                    </hgroup> 
+                </header>
+            </article>
+        </section>
+
+        <p id="introducao">Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+        
+        <section id="conteudo">
+            <figure>
+                <img src="../projeto-glass-html5/_imagens/glass-esquema-marcado.jpg" alt="imagem" id="oculosmarcado" usemap="#meumapa"> <!--Selecionando o mapa com hashtag e usemap-->
+                <map name="meumapa"> <!--criando mapa de imagem-->
+                    <area shape="rect" coords="150, 170, 220, 210" href="../projeto-glass-html5/_textos/google-glass-txt.html#tela" alt="telagoogleglass" target="janela" onmouseenter="opacit()" onmouseout="see()" onmouseout="mudarfoto('../projeto-glass-html5/_imagens/mao.png')" > <!--Primeiro colocar o formato (poligonal, redondo ou quadrado). Informar as cordenadas de onde quer que seja a selecao (utilizar editor de imagem para identificar coordenadas do mouse), informar o documento que sera utilizado seguido da tag da imagem especifica que e pra aparecer e por fim o target que sera o 'name' do iframe-->
+                    <area shape="circle" coords="150, 150, 58" href="../projeto-glass-html5/_textos/google-glass-txt.html#camera" alt="camera googleglass" target="janela" onmouseenter="opacit()" onmouseout="see()"> <!--Areas circulares precisa do raio em px e do centro em px.-->
+                    <area shape="circle" coords="64, 40, 10" href="../projeto-glass-html5/_textos/google-glass-txt.html#bateria" alt="bateria googleglass" target="janela" onmouseenter="opacit()" onmouseout="see()">
+                    <area shape="poly" coords="28, 143, 73, 206, 74, 239, 17, 159" href="../projeto-glass-html5/_textos/google-glass-txt.html#sensores" alt="sensores googleglass" target="janela" onmouseenter="opacit()" onmouseout="see()">
+                </map>
+                <iframe src="../projeto-glass-html5/_textos/google-glass-txt.html" name="janela" id="framespec" scrolling="no"></iframe>
+        </section>
+        
+        <footer>
+            &copy; Copyright - by Gustavo Guanabara <br> <br>
+            <a href=""_blank>Facebook</a> | <a href=""_blank>Twitter</a>
+        </footer>
+    </div>
+    <script src="../projeto-glass-html5/_javascript/funcoes.js"></script>
+</body>
+</html>
